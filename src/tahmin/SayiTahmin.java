@@ -1,5 +1,8 @@
 package tahmin;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class SayiTahmin {
     public static void main(String[] args) {
              /*
@@ -32,5 +35,17 @@ public class SayiTahmin {
    - 62
    -BİLDİNİZ....
     */
+
+        Scanner scan = new Scanner(System.in);
+        Random rnd = new Random();
+        int bilgisayardakiSayi = rnd.nextInt(100) + 1;
+        System.out.println(bilgisayardakiSayi);
+        System.out.println("0-100 Arasında Bir Sayı giriniz :");
+        int baslangıc = 0;
+        int bitis = 100;
+        int girilensayi = 0;
+        while (!(girilensayi == bilgisayardakiSayi)) {
+            System.out.print("Tahmininiz :");
+            girilensayi = scan.nextInt();
     }
 }
