@@ -47,5 +47,27 @@ public class SayiTahmin {
         while (!(girilensayi == bilgisayardakiSayi)) {
             System.out.print("Tahmininiz :");
             girilensayi = scan.nextInt();
+            if (girilensayi < bilgisayardakiSayi) {
+                if (girilensayi <= baslangıc || girilensayi >= bitis) {
+                    System.out.println("İstenen değerler dışında sayı girdiniz. KAYBETTİNİZ");
+                    break;
+                }
+                System.out.println(girilensayi + " ile " + bitis + " arasında bir sayı giriniz :");
+                if (girilensayi < bilgisayardakiSayi) {
+                    baslangıc = girilensayi;
+                }
+            } else if (girilensayi > bilgisayardakiSayi) {
+                if (girilensayi <= baslangıc || girilensayi >= bitis) {
+                    System.out.println("İstenen değerler dışında sayı girdiniz. KAYBETTİNİZ");
+                    break;
+                }
+                System.out.println(baslangıc + " ile " + girilensayi + " arasında bir sayı giriniz :");
+                if (girilensayi > bilgisayardakiSayi) {
+                    bitis = girilensayi;
+                }
+            } else {
+                System.out.println("BİLDİNİZ fakat KAYBETTİNİZ");
+            }
+        }
     }
 }
